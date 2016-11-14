@@ -8,40 +8,25 @@ import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
-import Counter from './components/Counter';
-import AjaxTest from './components/AjaxTest';
+import DataList from './components/DataList';
 import rootReducer from './reducers';
-import data from './data';
 
 require('./main.styl');
 
 class Main extends Component {
     constructor(props) {
         super(props);
-
         this.state = {};
     }
 
     render() {
         return (
-            <div id="workbench">
-                <ul>
-                    <li>11</li>
-                    <li>22</li>
-                    <li>33</li>
-                </ul>
-                <span className="ccc"></span>
-                <img src="https://www.baidu.com/img/baidu_jgylogo3.gif" />
-                <br/>
-                <div id="app-title">
-                    <Counter />
-                    <AjaxTest />
-                </div>
-                <br/>
-                <i className="icon-mute iconfont"></i>
-                <img src={require('./css/img/react-logo.png')} style={{height: '50px', width: '50px'}}/>
-            </div>
+            <DataList />
         );
+        /*return (
+            <i className="icon-mute iconfont"></i>
+            <img src={require('./css/img/react-logo.png')} style={{height: '50px', width: '50px'}}/>
+        );*/
     }
 }
 

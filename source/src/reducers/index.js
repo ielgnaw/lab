@@ -4,11 +4,9 @@
  */
 
 import {combineReducers} from 'redux';
-import counter from './counter';
-import ajaxTest from './ajaxTest';
+import dataList from './dataList';
 
 // 使用 redux 的 combineReducers 方法将所有 reducer 打包起来
 export default combineReducers({
-    counter,
-    ajaxTest
+    dataList
 });
